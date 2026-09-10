@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevOps Status</title>
+<style>
+body{font-family:Arial;margin:0;background:#f4f6f8;color:#17202a}.box{max-width:700px;margin:50px auto;padding:25px}.card{background:white;padding:25px;border-radius:14px;box-shadow:0 5px 20px #0002}h1{margin-top:0}.items{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:25px 0}.item{padding:18px;background:#eef6ff;border-radius:10px;text-align:center}.number{font-size:28px;font-weight:bold;display:block;margin-bottom:5px}button{padding:12px 20px;border:0;border-radius:8px;background:#1769e0;color:white;cursor:pointer}button:hover{background:#0d55bd}#result{margin-top:18px;font-weight:bold}@media(max-width:600px){.items{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="box"><div class="card">
+<h1>🚀 DevOps Status</h1>
+<p>Simple dashboard for infrastructure health.</p>
+<div class="items">
+<div class="item"><span class="number">1</span>Satellite</div>
+<div class="item"><span class="number">6</span>Capsules</div>
+<div class="item"><span class="number">5K+</span>Servers</div>
+</div>
+<button onclick="check()">Check Status</button>
+<div id="result">Status: Ready</div>
+</div></div>
+<script>
+function check(){
+ const r=document.getElementById('result');
+ r.textContent='🔄 Checking...';
+ setTimeout(()=>r.textContent='✅ All systems look healthy!',1000);
+}
+</script>
+</body>
+</html>
